@@ -1,10 +1,10 @@
 <?php
 
 // Setup Composer Autoload
-require_once ( 'vendor/autoload.php' );
+// require_once ( 'vendor/autoload.php' );
 
 // Advanced Custom Fields Plugin
-require_once ( '_inc/acf-include/acf-include.php' );
+// require_once ( '_inc/acf-include/acf-include.php' );
 
 // Helper Functions
 require_once ( '_core/helpers/helper-functions.php' );
