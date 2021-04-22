@@ -15,6 +15,9 @@ function starter_scripts() {
     }
 
     // Stylesheets
+    wp_dequeue_style( 'wp-block-library' );
+    wp_dequeue_style( 'wp-block-library-theme' );
+    wp_dequeue_style( 'wc-block-style' ); 
 
     // Main Stylesheet
     wp_enqueue_style(
