@@ -4,6 +4,11 @@ add_action( 'wp_enqueue_scripts', 'starter_scripts' );
 
 function starter_scripts() {
     $version = '1.0.0';
+    
+    if (!is_admin()) {
+        // wp_deregister_script('jquery');
+        // wp_register_script('jquery', false);
+    }
 
     if (is_singular() && comments_open() && (get_option('thread_comments') == 1)) {
         wp_enqueue_script('comment-reply');
