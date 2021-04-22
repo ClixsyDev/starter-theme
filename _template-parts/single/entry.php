@@ -6,9 +6,9 @@
     </h2>
     
 
-    <!-- Excerpt -->
+    <!-- Content -->
     <div>
-        <?php the_excerpt(); ?>
+        <?php the_content(); ?>
     </div>
 
 </article>
