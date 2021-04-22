@@ -1,3 +1,7 @@
+<?php
+use App\Template;
+?>
+
 <?php get_header(); ?>
 
 <!-- Main Content -->
@@ -7,9 +11,7 @@
 
         <!-- The Loop -->
         <?php while (have_posts()) : the_post(); ?>
-            <article>
-                <h2><?php the_title(); ?></h2>
-            </article>
+            <?php include(Template::locate('_template-parts/archive/entry.php')); ?>
         <?php endwhile; ?>
 
     <?php else : ?>
