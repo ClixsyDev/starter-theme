@@ -3,18 +3,14 @@ use App\Template;
 ?>
 
 <?php get_header(); ?>
-            
+
+    <!-- Main Content -->
     <main>
 
-        <!-- Title -->
-        <h1>
-            <?php the_title(); ?>
-        </h1>
-
-        <!-- Content -->
-        <div>
-            <?php the_content(); ?>
-        </div>
+        <!-- Entry -->
+        <?php while (have_posts()) : the_post(); ?>
+            <?php include(Template::locate('_template-parts/single/entry.php')); ?>
+        <?php endwhile; ?>
 
     </main>
 
