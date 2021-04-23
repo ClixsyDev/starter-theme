@@ -5,7 +5,7 @@ use App\Template;
 <?php get_header(); ?>
 
     <!-- Main Content -->
-    <main class="content _single col-9 col-d-8 col-tl-12">
+    <main>
 
         <!-- Entry -->
         <?php while (have_posts()) : the_post(); ?>
