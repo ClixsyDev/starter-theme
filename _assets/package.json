@@ -1,0 +1,13 @@
+{
+  "name": "starter-theme",
+  "version": "1.0.0",
+  "description": "Starter theme",
+  "author": "Ivan Stantic",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "laravel-mix": "^6.0.18",
+    "postcss": "^8.2.12"
+  }
+}
