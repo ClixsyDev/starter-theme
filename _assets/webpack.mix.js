@@ -1,8 +1,13 @@
 /* eslint-disable import/no-extraneous-dependencies */
 /* eslint-disable global-require */
 const mix = require('laravel-mix');
+const StylelintPlugin = require('stylelint-webpack-plugin');
 
 mix.webpackConfig({
+  plugins: [new StylelintPlugin({
+    configFile: './.stylelintrc.json',
+    files: './src/css/*.css',
+  })],
   module: {
     rules: [
       {

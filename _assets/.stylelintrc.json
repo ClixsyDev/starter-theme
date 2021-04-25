@@ -9,5 +9,8 @@
         "tailwind"
       ]
     }]
-  }
+  },
+  "ignoreFiles": [
+    "public/**/*.css"
+  ]
 }
