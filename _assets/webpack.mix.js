@@ -2,12 +2,19 @@
 /* eslint-disable global-require */
 const mix = require('laravel-mix');
 const StylelintPlugin = require('stylelint-webpack-plugin');
+const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
 mix.webpackConfig({
-  plugins: [new StylelintPlugin({
-    configFile: './.stylelintrc.json',
-    files: './src/css/*.css',
-  })],
+  plugins: [
+    new StylelintPlugin({
+      configFile: './.stylelintrc.json',
+      files: './src/css/*.css',
+    }),
+    new ImageminPlugin({
+      disable: !mix.production,
+      test: /\.(jpe?g|png|gif|svg)$/i,
+    }),
+  ],
   module: {
     rules: [
       {
@@ -15,6 +22,14 @@ mix.webpackConfig({
         test: /\.(js)$/,
         loader: 'eslint-loader',
         exclude: /node_modules/,
+      },
+      {
+        test: /\.(jpe?g|png|gif)$/,
+        loader: 'url-loader',
+        options: {
+          // Images larger than 10 KB won’t be inlined
+          limit: 10 * 1024,
+        },
       },
     ],
   },
