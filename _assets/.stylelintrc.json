@@ -11,6 +11,7 @@
     }]
   },
   "ignoreFiles": [
-    "public/**/*.css"
+    "public/**/*.css",
+    "*.js"
   ]
 }
