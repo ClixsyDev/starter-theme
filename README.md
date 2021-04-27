@@ -1,5 +1,8 @@
 # WordPress starter theme
 
+This is a starter theme focused on page speed optimized aproach to web development withstrict coding styles and clean, flexible and 
+easily maintainable code.
+
 ## PHP autoload and dependencies
 
 PHP Composer is being used for autoloading and dependecies management and you need to run `composer install`.
