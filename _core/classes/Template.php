@@ -11,7 +11,7 @@ class Template
      */
     public static function locate($path)
     {
-        return locate_template( $path, false, false );
+        return locate_template($path, false, false);
     }
 
     /**

@@ -30,7 +30,7 @@ private static $installed = array (
     'aliases' => 
     array (
     ),
-    'reference' => 'dd39e854e561d397a87a7003ae69b179b7df6402',
+    'reference' => '235760bbfe70926b06bb46f179ca7ad0df02062b',
     'name' => '__root__',
   ),
   'versions' => 
@@ -42,7 +42,7 @@ private static $installed = array (
       'aliases' => 
       array (
       ),
-      'reference' => 'dd39e854e561d397a87a7003ae69b179b7df6402',
+      'reference' => '235760bbfe70926b06bb46f179ca7ad0df02062b',
     ),
     'grogy/php-parallel-lint' => 
     array (
@@ -98,6 +98,15 @@ private static $installed = array (
       array (
       ),
       'reference' => '772a954e5f119f6f5871d015b23eabed8cbdadfb',
+    ),
+    'squizlabs/php_codesniffer' => 
+    array (
+      'pretty_version' => '3.6.0',
+      'version' => '3.6.0.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => 'ffced0d2c8fa8e6cdc4d695a743271fab6c38625',
     ),
   ),
 );
