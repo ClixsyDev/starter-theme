@@ -10,6 +10,10 @@ These are the linting scripts:
 - `composer run-script lint:cs` will check the code styling against the PSR-12 coding style (https://www.php-fig.org/psr/psr-12/)
 - `composer run-script lint:cs:fix` will automatically fix all coding style issues
 
+### Template parts
+
+Templates should be split into components and organized within the `_template-parts` folder.  
+
 ## Assets
 
 Laravel mix is being used for asset build and compilation:
