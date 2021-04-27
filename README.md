@@ -2,7 +2,7 @@
 
 ## PHP autoload and dependencies
 
-PHP Composer is being used for autoloading and php dependecies management and you need to run `composer install`.
+PHP Composer is being used for autoloading and dependecies management and you need to run `composer install`.
 
 These are the linting scripts:
 
