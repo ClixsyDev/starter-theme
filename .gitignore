@@ -1,4 +1,8 @@
 .DS_Store
+
 node_modules
+
 vendor/*
 !vendor/composer
+vendor/composer/installed.php
+vendor/composer/InstalledVersions.php
