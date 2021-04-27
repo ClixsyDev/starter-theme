@@ -1,6 +1,6 @@
 # WordPress starter theme
 
-This is a starter theme focused on page speed optimized aproach to web development withstrict coding styles and clean, flexible and 
+This is a starter theme focused on page speed optimized aproach to web development with strict coding styles and clean, flexible and 
 easily maintainable code.
 
 ## PHP autoload and dependencies
