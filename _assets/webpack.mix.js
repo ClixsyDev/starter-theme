@@ -5,22 +5,29 @@ const StylelintPlugin = require('stylelint-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
 
+const developmentPlugins = [
+  new StylelintPlugin({
+    configFile: './.stylelintrc.json',
+    files: './src/css/*.css',
+  }),
+];
+
+const productionPlugins = [
+  new CopyPlugin({
+    patterns: [
+      { from: './src/images', to: './public/images' },
+    ],
+  }),
+  new ImageminPlugin({
+    disable: !mix.inProduction(),
+    test: /\.(jpe?g|png|gif|svg)$/i,
+  }),
+];
+
+const plugins = mix.inProduction() ? productionPlugins : developmentPlugins;
+
 mix.webpackConfig({
-  plugins: [
-    new StylelintPlugin({
-      configFile: './.stylelintrc.json',
-      files: './src/css/*.css',
-    }),
-    new CopyPlugin({
-      patterns: [
-        { from: './src/images', to: './public/images' },
-      ],
-    }),
-    new ImageminPlugin({
-      disable: !mix.production,
-      test: /\.(jpe?g|png|gif|svg)$/i,
-    }),
-  ],
+  plugins,
   module: {
     rules: [
       {

@@ -5,7 +5,10 @@
   "author": "Ivan Stantic",
   "scripts": {
     "lint": "eslint src/js",
-    "stylelint": "stylelint src/css/*.css"
+    "stylelint": "stylelint src/css/*.css",
+    "watch": "watch",
+    "build:dev": "mix",
+    "build": "mix --production"
   },
   "devDependencies": {
     "autoprefixer": "^10.2.5",

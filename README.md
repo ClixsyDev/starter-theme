@@ -29,9 +29,9 @@ These are the steps needed in order to start working on the project:
 - Install NPM
 - All commands should be run from the `_assets` folder
 - Install all dependecies with `npm install`
-- For development you should run `npx mix watch` or you can setup browser sync: 
+- For development you should run `npm run watch` or you can setup browser sync: 
     - https://laravel-mix.com/docs/6.0/browsersync
-- Before pushing to git you need to compile assets for production with: `npx mix --production`
+- Before pushing to git you need to compile assets for production with: `npm run build`
 
 These are the linting scripts:
 
