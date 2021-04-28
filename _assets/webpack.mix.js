@@ -10,6 +10,11 @@ const developmentPlugins = [
     configFile: './.stylelintrc.json',
     files: './src/css/*.css',
   }),
+  new CopyPlugin({
+    patterns: [
+      { from: './src/images', to: './public/images' },
+    ],
+  }),
 ];
 
 const productionPlugins = [
