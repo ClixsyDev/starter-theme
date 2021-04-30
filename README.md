@@ -54,3 +54,53 @@ jQuery has been disabled and a modern javascript compilation has been set for us
 ### Images
 
 Images are optimized and moved from `_assets/src/images` to `_assets/public/images`
+
+## Lazy Load
+
+This lib has been added for lazy loading: https://apoorv.pro/lozad.js/
+
+Image example:
+
+```
+<div style="max-width: 360px">
+    <picture class="lozad" data-iesrc="/images/thumbs/picture-01.jpg">
+        <source srcset="/images/thumbs/picture-01.webp">
+        <source srcset="/images/thumbs/picture-01.jpg" media="(min-width: 1280px)">
+        <source srcset="/images/thumbs/picture-02.jpg" media="(min-width: 980px)">
+        <source srcset="/images/thumbs/picture-03.jpg" media="(min-width: 320px)">
+        <noscript><img src="/images/thumbs/picture-01.jpg"></noscript>
+        <div class="placeholder" style="padding-top: 68.61%"></div>
+    </picture>
+</div>
+```
+
+Background image example:
+
+```
+<div
+    class="lozad"
+    data-background-image="https://apoorv.pro/lozad.js/demo/images/backgrounds/background-single.jpg"
+    style="
+        min-height: 12rem;
+        min-width: 240px;
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    "
+></div>
+```
+
+Iframe example:
+
+```
+<iframe
+    class="lozad"
+    width="560"
+    height="315"
+    data-src="https://www.youtube.com/embed/L3HQMbQAWRc"
+    title="YouTube video player"
+    frameborder="0"
+    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen
+></iframe>
+```
