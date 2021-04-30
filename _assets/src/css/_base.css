@@ -9,3 +9,12 @@
 html {
   box-sizing: border-box;
 }
+
+picture.lozad {
+  display: block;
+  min-height: 1rem;
+
+  &[data-loaded="true"] .placeholder {
+    display: none;
+  }
+}

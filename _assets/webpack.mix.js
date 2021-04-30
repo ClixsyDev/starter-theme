@@ -4,29 +4,31 @@ const mix = require('laravel-mix');
 const StylelintPlugin = require('stylelint-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 const ImageminPlugin = require('imagemin-webpack-plugin').default;
+const ImageminMozjpeg = require('imagemin-mozjpeg');
+const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
+
+const productionPlugins = [
+  new CopyPlugin({
+    patterns: [
+      { from: './src/images/for-optimization', to: './public/images' },
+    ],
+  }),
+  new ImageminPlugin({
+    disable: !mix.inProduction(),
+    pngquant: ({ quality: [0.65, 0.80] }),
+    plugins: [
+      ImageminMozjpeg({ quality: 75 }),
+    ],
+  }),
+  new ImageminWebpWebpackPlugin(),
+];
 
 const developmentPlugins = [
   new StylelintPlugin({
     configFile: './.stylelintrc.json',
     files: './src/css/*.css',
   }),
-  new CopyPlugin({
-    patterns: [
-      { from: './src/images', to: './public/images' },
-    ],
-  }),
-];
-
-const productionPlugins = [
-  new CopyPlugin({
-    patterns: [
-      { from: './src/images', to: './public/images' },
-    ],
-  }),
-  new ImageminPlugin({
-    disable: !mix.inProduction(),
-    test: /\.(jpe?g|png|gif|svg)$/i,
-  }),
+  ...productionPlugins,
 ];
 
 const plugins = mix.inProduction() ? productionPlugins : developmentPlugins;
