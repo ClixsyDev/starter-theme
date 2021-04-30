@@ -10,7 +10,7 @@ const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 const productionPlugins = [
   new CopyPlugin({
     patterns: [
-      { from: './src/images/for-optimization', to: './public/images' },
+      { from: './src/images', to: './public/images' },
     ],
   }),
   new ImageminPlugin({
