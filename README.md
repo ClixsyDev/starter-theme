@@ -64,7 +64,9 @@ Image example:
 ```
 <div style="max-width: 360px">
     <picture class="lozad" data-iesrc="/images/thumbs/picture-01.jpg">
-        <source srcset="/images/thumbs/picture-01.webp">
+        <source srcset="/images/thumbs/picture-01.webp" media="(min-width: 1280px)">
+        <source srcset="/images/thumbs/picture-02.webp" media="(min-width: 980px)">
+        <source srcset="/images/thumbs/picture-03.webp" media="(min-width: 320px)">
         <source srcset="/images/thumbs/picture-01.jpg" media="(min-width: 1280px)">
         <source srcset="/images/thumbs/picture-02.jpg" media="(min-width: 980px)">
         <source srcset="/images/thumbs/picture-03.jpg" media="(min-width: 320px)">
@@ -103,4 +105,42 @@ Iframe example:
     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
     allowfullscreen
 ></iframe>
+```
+
+Slider example:
+
+```
+<div style="height: 100vh">
+    <div class="glide" style="max-width: 360px; margin: 0 auto">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img src="https://apoorv.pro/lozad.js/demo/images/thumbs/picture-01.jpg"></li>
+                <li class="glide__slide"><img src="https://apoorv.pro/lozad.js/demo/images/thumbs/picture-02.jpg"></li>
+                <li class="glide__slide"><img src="https://apoorv.pro/lozad.js/demo/images/thumbs/picture-03.jpg"></li>
+            </ul>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+        </div>
+    </div>
+</div>
+```
+
+```
+import lozad from 'lozad';
+
+const mySliderObserver = lozad('.glide', {
+  load: async (el) => {
+    const { default: Glide } = await import('@glidejs/glide');
+    new Glide(el, { autoplay: 2000, dragThreshold: 1 }).mount();
+  },
+});
+mySliderObserver.observe();
+```
+
+```
+@import "~@glidejs/glide/dist/css/glide.core.css";
+@import "~@glidejs/glide/dist/css/glide.theme.css";
 ```
