@@ -45,6 +45,10 @@ mix.webpackConfig({
       },
     ],
   },
+  output: {
+    publicPath: '/wp-content/themes/stoneinjurylawyers/_assets/',
+    chunkFilename: 'public/js/chunk-[id].js',
+  },
 });
 
 mix.js('src/js/script.js', 'public/js')
