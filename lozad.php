@@ -12,7 +12,7 @@
     <div style="height: 100vh">
         <div style="max-width: 360px">
             <picture class="lozad" data-iesrc="https://apoorv.pro/lozad.js/demo/images/thumbs/picture-01.jpg">
-                <source srcset="<?php the_post_thumbnail_url(); ?>">
+                <!-- <source srcset="<?php the_post_thumbnail_url(); ?>"> -->
                 <source srcset="https://apoorv.pro/lozad.js/demo/images/thumbs/picture-01.jpg" media="(min-width: 1280px)">
                 <source srcset="https://apoorv.pro/lozad.js/demo/images/thumbs/picture-02.jpg" media="(min-width: 980px)">
                 <source srcset="https://apoorv.pro/lozad.js/demo/images/thumbs/picture-03.jpg" media="(min-width: 320px)">
@@ -66,6 +66,23 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen
     ></iframe>
+</div>
+
+<div style="height: 100vh">
+    <div class="glide" style="max-width: 360px; margin: 0 auto">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                <li class="glide__slide"><img src="https://apoorv.pro/lozad.js/demo/images/thumbs/picture-01.jpg"></li>
+                <li class="glide__slide"><img src="https://apoorv.pro/lozad.js/demo/images/thumbs/picture-02.jpg"></li>
+                <li class="glide__slide"><img src="https://apoorv.pro/lozad.js/demo/images/thumbs/picture-03.jpg"></li>
+            </ul>
+        </div>
+        <div class="glide__bullets" data-glide-el="controls[nav]">
+            <button class="glide__bullet" data-glide-dir="=0"></button>
+            <button class="glide__bullet" data-glide-dir="=1"></button>
+            <button class="glide__bullet" data-glide-dir="=2"></button>
+        </div>
+    </div>
 </div>
 
 <?php get_footer(); ?>
