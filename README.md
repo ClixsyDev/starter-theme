@@ -55,6 +55,34 @@ jQuery has been disabled and a modern javascript compilation has been set for us
 
 Images are optimized and moved from `_assets/src/images` to `_assets/public/images`
 
+## Fonts
+
+Fonts should be downloaded and served from the `_assets/public/fonts` folder.
+
+Add these code snippets to the header:
+
+```
+<link rel="preload" as="font" type="font/woff2" crossorigin href="<?= site_url(); ?>/wp-content/themes/twentytwenty-child/fonts/montserrat-v15-latin-regular.woff2"/>
+```
+
+```
+<style>
+    @font-face {
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-display: optional;
+        src: url('/wp-content/themes/starter-theme/_assets/public/fonts/montserrat-v15-latin-regular.eot'); /* IE9 Compat Modes */
+        src: local(''),
+            url('/wp-content/themes/starter-theme/_assets/public/fonts/montserrat-v15-latin-regular.eot?#iefix') format('embedded-opentype'),
+            url('/wp-content/themes/starter-theme/_assets/public/fonts/montserrat-v15-latin-regular.woff2') format('woff2'),
+            url('/wp-content/themes/starter-theme/_assets/public/fonts/montserrat-v15-latin-regular.woff') format('woff'),
+            url('/wp-content/themes/starter-theme/_assets/public/fonts/montserrat-v15-latin-regular.ttf') format('truetype'),
+            url('/wp-content/themes/starter-theme/_assets/public/fonts/montserrat-v15-latin-regular.svg#Montserrat') format('svg');
+    }
+</style>
+```
+
 ## Lazy Load
 
 This lib has been added for lazy loading: https://apoorv.pro/lozad.js/
