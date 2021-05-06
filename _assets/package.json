@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint src/js",
     "stylelint": "stylelint src/css/*.css",
-    "watch": "watch",
+    "watch": "mix watch",
     "build:dev": "mix",
     "build": "mix --production"
   },
