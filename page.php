@@ -9,7 +9,7 @@ use App\Template;
 
         <!-- Entry -->
         <?php while (have_posts()) : the_post(); ?>
-            <?php include(Template::locate('_template-parts/single/entry.php')); ?>
+            <?php include(Template::locate('_template-parts/single/_entry.php')); ?>
         <?php endwhile; ?>
 
     </main>

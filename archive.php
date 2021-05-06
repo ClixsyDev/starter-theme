@@ -11,7 +11,7 @@ use App\Template;
 
             <!-- The Loop -->
             <?php while (have_posts()) : the_post(); ?>
-                <?php include(Template::locate('_template-parts/archive/entry.php')); ?>
+                <?php include(Template::locate('_template-parts/archive/_entry.php')); ?>
             <?php endwhile; ?>
 
         <?php else : ?>
