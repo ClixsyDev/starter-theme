@@ -15,7 +15,7 @@ const productionPlugins = [
   }),
   new ImageminPlugin({
     disable: !mix.inProduction(),
-    pngquant: ({ quality: [0.65, 0.80] }),
+    pngquant: ({ quality: '65-80' }),
     plugins: [
       ImageminMozjpeg({ quality: 75 }),
     ],
